@@ -14,17 +14,16 @@ config :blog, BlogWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "oxuac8/0WnOgbiE17w/l47ZNzrpOKULZk3aiq+d6j3jvhgjeGizt7f9jcie37oJq",
   render_errors: [view: BlogWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: Blog.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: Blog.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
- # Configure a JSON library
-config :phoenix, :json_library, Jason 
+# Configure a JSON library
+config :phoenix, :json_library, Jason
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"
