@@ -1,8 +1,13 @@
 version: '3'
 services:
-  web:
-    build: .
+  postgres:
+    image: postgres
     ports:
-      - "5000:5000"
-  redis:
-    image: "redis:alpine"
+      - "5432:5432"
+    volumes:
+      - "data_base:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_PASSWORD: hitman
+      POSTGRES_DB: blog_dev
+volumes:
+  data_base:
