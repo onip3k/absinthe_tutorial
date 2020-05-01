@@ -1,3 +1,8 @@
+# init
+My first repository on GitHub
+I love :beer:, :runner:, :family:.
+
+
 # Absinthe Tutorial Code
 
 This repository houses the example code for the official Absinthe tutorial
